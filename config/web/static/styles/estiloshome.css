@@ -3,24 +3,25 @@
     background-position: top center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 20%;
-    position: relative;
+    padding: 22%;
+    position:relative;
     z-index: 1;
 }
+
 .banner::after{
     content:'';
-    position: absolute;
+    position:absolute;
     top:0;
     left:0;
-    width: 100%;
+    width:100%;
     height: 100%;
-    background-color: white;
-    opacity: 0.2;
+    background-color: white !important;
+    opacity: 0.25;
     z-index: -1;
-
 }
+
 .menu{
-    background-color:gray;
+    background-color:green !important;
 }
 
 .zoom{
@@ -29,5 +30,19 @@
 
 .zoom:hover{
     transform: scale(1.1);
-
 }
+
+.empleados{
+    background-image: url('../img/empledos.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 22%;
+    position:relative;
+    z-index: 1;
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
