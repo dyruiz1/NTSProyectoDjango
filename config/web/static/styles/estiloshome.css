@@ -31,9 +31,8 @@
 .zoom:hover{
     transform: scale(1.1);
 }
-
 .empleados{
-    background-image: url('../img/empledos.jpg');
+    
     background-size: cover;
     background-attachment: fixed;
     padding: 22%;

@@ -1,100 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/styles/estilosHome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-</head>
-<body>
-
-    <header>
-        {% include './shared/menu.html' %}
-    </header>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/styles/estilosHome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <header>{% include './shared/menu.html' %}</header>
     <main>
+      <section>
+        <div class="banner">
+          <img src="../static/img/elherbario_logo.svg" alt="logo" />
+        </div>
+      </section>
 
-        <section>
-            <div class="banner">
-                <img src="../static/img/elherbario_logo.svg" alt="logo">
+      <section>
+        <div class="container my-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-5 text-center">
+              <img
+                src="../static/img/plato.png"
+                alt="plato"
+                class="img-fluid w-100"
+              />
+              <h1>El herbario de la abuela</h1>
+              <p class="wow animate__animated animate__fadeInUp animate__slow">
+                Restaurante ElHernbario de la Abuela
+                El Restaurante ElHernbario de la Abuela se caracteriza por ofrecer a sus clientes experiencias culinarias únicas, en las que todos los sentidos están involucrados desde el primer plato. Se mezclan técnicas de vanguardia con métodos tradicionales de la cocina colombiana. Colombia, precisamente, está a cada paso dentro de ElHernbario de la Abuela: los ingredientes y quienes los preparan son colombianos que sueñan con que nuestros sabores lleguen a los ciudadanos del mundo.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section>
-            <div class="container my-5">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-5 text-center">
-                        <img src="../static/img/plato.png" alt="plato" class="img-fluid w-100">
-                        <h1>El herbario de la huerta</h1>
-                        <p class="wow animate__animated animate__fadeInUp animate__slow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, qui vitae soluta esse consectetur iure inventore aut hic magni, sequi at laboriosam nihil vero laudantium dolorem! Facere nulla iste sapiente.</p>
-                    </div>
+      <section>
+        <div class="container-fluid g-0 my-5">
+          <div class="row">
+            <div class="col-12 col-md-6 align-self-center">
+              <img
+                src="../static/img/huerta.jpeg"
+                alt="huerta"
+                class="img-fluid w-100"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="row">
+                <div class="col-12 col-md-6 text-center">
+                  <img
+                    src="../static/img/vegetal_1.jpg"
+                    alt="vg1"
+                    class="img-fluid w-100"
+                  />
+                  <h2
+                    class="fw-bold wow animate__animated animate__fadeInUp animate__slow"
+                  >
+                    CATERING
+                  </h2>
+                  <p
+                    class="wow animate__animated animate__fadeInUp animate__slow"
+                  >
+                  La carta se divide en momentos gastronómicos, que llevan al comensal a sentir y vivir un sinfín de emociones. del Restaurante es cocina de autor, donde se mezclan técnicas de vanguardia con métodos tradicionales de la cocina colombiana
+                  </p>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container-fluid g-0 my-5">
-                <div class="row">
-                    <div class="col-12 col-md-6 align-self-center">
-                        <img src="../static/img/huerta.jpeg" alt="huerta" class="img-fluid w-100">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="row">
-                            <div class="col-12 col-md-6 text-center">
-                                <img src="../static/img/vegetal_1.jpg" alt="vg1" class="img-fluid w-100">
-                                <h2 class="fw-bold wow animate__animated animate__fadeInUp animate__slow">CATERING</h2>
-                                <p class="wow animate__animated animate__fadeInUp animate__slow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi officiis soluta quisquam voluptates commodi nisi recusandae ea delectus! Vero nam doloremque eos dolores nesciunt laudantium praesentium possimus quae labore distinctio.</p>
-                            </div>
-                            <div class="col-12 col-md-6 text-center">
-                                <img src="../static/img/vegetal_2.jpg" alt="vg1" class="img-fluid w-100">
-                                <h2 class="fw-bold wow animate__animated animate__fadeInUp animate__slow">SERVICIOS SOCIALES</h2>
-                                <p class="wow animate__animated animate__fadeInUp animate__slow">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem assumenda, corrupti neque iste libero, mollitia recusandae, nostrum iusto cupiditate atque quibusdam corporis. Quia quod, provident magnam harum consequuntur nesciunt.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12 col-md-6 text-center">
+                  <img
+                    src="../static/img/vegetal_2.jpg"
+                    alt="vg1"
+                    class="img-fluid w-100"
+                  />
+                  <h2
+                    class="fw-bold wow animate__animated animate__fadeInUp animate__slow"
+                  >
+                    SERVICIOS SOCIALES
+                  </h2>
+                  <p
+                    class="wow animate__animated animate__fadeInUp animate__slow"
+                  >
+                  La Fundación del Restaurante es una entidad sin fines de lucro, creada el 14 de noviembre de 2010. Desde hace más de 12 años, del Restaurante se ha comprometido a brindar los recursos adecuados para brindar educación y generar desarrollo humano a las personas que se encuentran en situación de vulnerabilidad, y económica o problemas físicos en nuestra sociedad
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section>
-            <div class="container menu">
-                <div class="row justify-content-center p-5">
-
-                    <div class="col-12 text-center text-white">
-                        <h2 class="mb-3">Nuestros platos</h2>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <img src="../static/img/plato1.jpg" alt="p1" class="img-fluid w-100 wow animate__animated animate__fadeInLeft animate__slow zoom">
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <img src="../static/img/plato2.jpg" alt="p2" class="img-fluid w-100 zoom">
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <img src="../static/img/plato3.jpg" alt="p3" class="img-fluid w-100 wow animate__animated animate__fadeInRight animate__slow shadow zoom">
-                    </div>
-                    <div class="col-12 text-center mt-4">
-                        <a href="#" class="btn btn-outline-light">Ver Menú</a>
-                    </div>
-
-                </div>
+      <section>
+        <div class="container menu">
+          <div class="row justify-content-center p-5">
+            <div class="col-12 text-center text-white">
+              <h2 class="mb-3">Nuestros platos</h2>
             </div>
-        </section>
-
-
-
+            <div class="col-12 col-md-3">
+              <img
+                src="../static/img/plato1.jpg"
+                alt="p1"
+                class="img-fluid w-100 wow animate__animated animate__fadeInLeft animate__slow zoom"
+              />
+            </div>
+            <div class="col-12 col-md-3">
+              <img
+                src="../static/img/plato2.jpg"
+                alt="p2"
+                class="img-fluid w-100 zoom"
+              />
+            </div>
+            <div class="col-12 col-md-3">
+              <img
+                src="../static/img/plato3.jpg"
+                alt="p3"
+                class="img-fluid w-100 wow animate__animated animate__fadeInRight animate__slow shadow zoom"
+              />
+            </div>
+            <div class="col-12 text-center mt-4">
+              <a href="#" class="btn btn-outline-light">Ver Menú</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-
-    
+    <section>{% include './shared/footer.html' %}</section>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <script src="../static/js/wow.min.js"></script>
     <script>
-        new WOW().init();
+      new WOW().init();
     </script>
-</body>
+  </body>
 </html>

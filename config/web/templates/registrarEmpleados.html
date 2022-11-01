@@ -16,14 +16,12 @@
         {% include './shared/menu.html' %}
     </header>
     <br><br><br>
-    <main>
-        <div class="container mt">
-            <section>
-                <div class="empleados">
-                    <img src="../static/img/empledos.jpg" alt="empleados">
-                </div>
-            </section>
-            
+        <main>
+            <div class="empleados">
+                <img src="../static/img/empledos.jpg" alt="empleados" class="img-fluid w-100">
+            </div>
+        </main>
+    <section>        
             <div class="container my-5">              
                 <div class="col-12 col-md-7">
                     <h2>REGISTRO DE EMPLEADOS</h2>
@@ -34,7 +32,10 @@
                 </div>               
             </div>           
         </div>
-    </main>
+    </section>
+    <section>
+        {% include './shared/footer.html' %}
+    </section>
     
 </body>
 </html>
