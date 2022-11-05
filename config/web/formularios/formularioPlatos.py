@@ -6,17 +6,18 @@ class FormularioPlatos(forms.Form):
     PLATOS = (
             (1, 'Entrada'),
             (2, 'Plato fuerte'),
-            (3, 'Postre'),
+            (3, 'Bebida'),
+            (4, 'Postre'),
     )
     nombre = forms.CharField(
             required=True,
-            max_length=15,
+            max_length=20,
             widget=forms.TextInput(attrs={'class': 'form-control mb-3'})
     )
 
     descripcion = forms.CharField(
             required=True,
-            max_length=20,
+            max_length=200,
             widget=forms.Textarea(attrs={'class': 'form-control mb-3'})
     )
 
