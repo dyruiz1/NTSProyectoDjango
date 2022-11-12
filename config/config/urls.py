@@ -16,12 +16,14 @@ Including another URLconf
 from tkinter import N
 from django.contrib import admin
 from django.urls import path
-from web.views import Home, PlatosVista, EmpleadosVista
+from web.views import Home, PlatosVista, EmpleadosVista, Menurestaurante
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home, name = 'home'),
     path('platos',PlatosVista, name = 'platos'),
     path('empleados',EmpleadosVista, name= 'empleados'),
+    path('menu/', Menurestaurante, name="menu")
 ]
 
 

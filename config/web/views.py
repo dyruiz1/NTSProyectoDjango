@@ -20,7 +20,7 @@ def Menurestaurante(request):
         'platos':platosBD
     }
 
-    return render(request,'menurestaurante.html',data)
+    return render(request,'menuRestaurante.html',data)
 
 def PlatosVista(request):
 
