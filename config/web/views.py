@@ -11,7 +11,23 @@ from web.models import Empleados
 def Home(request):
     return render (request, 'home.html')
 
+
+def Menurestaurante(request):
+
+    platosBD=Platos.objects.all()
+
+    data={
+        'platos':platosBD
+    }
+
+    return render(request,'menurestaurante.html',data)
+
 def PlatosVista(request):
+
+    #RUTINA PARA consultar platos
+
+    platosConsultar =Platos.objects.all()
+    print(platosConsultar)
     
     #esta vista va a utilizar un formulario de django, se cres un objeto de clase FormularioPlatos()
     formulario = FormularioPlatos()
@@ -19,7 +35,9 @@ def PlatosVista(request):
 #cramos un diccionario para enviar el formulario al html
 
     data = {
-    'formulario': formulario
+    'formulario': formulario,
+    'bandera': False,
+    'platos':platosConsultar
 }
 #vista es el controlador, por aca RECIBIMOS LOS DATOS DEL FORMULARIO
     if request.method == 'POST':
@@ -41,21 +59,35 @@ def PlatosVista(request):
 
             try :
                 platoNuevo.save()
+                data["bandera"] = True
                 print("exito guardando")
 
             except Exception as error:
                 print("uppss", error)
+                data["bandera"] = False
+
     
     return render (request, 'menuplatos.html', data)
 
+
+ #ahora para Empleados   
+
 def EmpleadosVista(request):
+
+    #RUTINA PARA consultar empleados
+
+    EmpleadosConsultar =Empleados.objects.all()
+    print(EmpleadosConsultar)
+
     #esta vista va a utilizar un formulario de django, se cres un objeto de clase FormularioPlatos()
     formulario = FormularioEmpleados()
 
 #cramos un diccionario para enviar el formulario al html
 
     data = {
-    'formulario': formulario
+    'formulario': formulario,
+    'bandera': False,
+    'empleados':EmpleadosConsultar
 }
     #vista es el controlador, por aca RECIBIMOS LOS DATOS DEL FORMULARIO
     if request.method == 'POST':
@@ -76,9 +108,11 @@ def EmpleadosVista(request):
             try :
                 empleadoNuevo.save()
                 print("exito guardando")
+                data["bandera"] = True
 
             except Exception as error:
                 print("uppss", error)
+                data["bandera"] = False
     return render (request, 'registrarEmpleados.html', data)
 
 
