@@ -12,15 +12,35 @@ def Home(request):
     return render (request, 'home.html')
 
 
+#funcion para el menu
 def Menurestaurante(request):
 
-    platosBD=Platos.objects.all()
+        platosBD=Platos.objects.all()
 
-    data={
-        'platos':platosBD
-    }
+        data={
+            'entradas': list(filter(lambda x: x.tipo == 1, platosBD)),
+            'platos': list(filter(lambda x: x.tipo == 2, platosBD)),
+            'bebidas': list(filter(lambda x: x.tipo == 3, platosBD)),
+            'postres': list(filter(lambda x: x.tipo == 4, platosBD)),
+        }
 
-    return render(request,'menuRestaurante.html',data)
+        return render(request,'menuRestaurante.html',data)
+
+# VISTA EMPLEADOS
+def menuEmpleados(request):
+
+        empleadosBD=Empleados.objects.all()
+
+        data={
+            'cheffs': list(filter(lambda x: x.cargo == 1, empleadosBD)),
+            'administradores': list(filter(lambda x: x.cargo == 2, empleadosBD)),
+            'meseros': list(filter(lambda x: x.cargo == 3, empleadosBD)),
+            'ayudantes': list(filter(lambda x: x.cargo == 4, empleadosBD)),
+        }
+
+        return render(request,'menuEmpleados.html',data)
+
+# VISTA PLATOS
 
 def PlatosVista(request):
 
@@ -32,14 +52,14 @@ def PlatosVista(request):
     #esta vista va a utilizar un formulario de django, se cres un objeto de clase FormularioPlatos()
     formulario = FormularioPlatos()
 
-#cramos un diccionario para enviar el formulario al html
+    #creamos un diccionario para enviar el formulario al html
 
     data = {
     'formulario': formulario,
     'bandera': False,
     'platos':platosConsultar
-}
-#vista es el controlador, por aca RECIBIMOS LOS DATOS DEL FORMULARIO
+    }
+    #vista es el controlador, por aca RECIBIMOS LOS DATOS DEL FORMULARIO
     if request.method == 'POST':
         datosFormulario = FormularioPlatos(request.POST)
         if datosFormulario.is_valid():
@@ -70,7 +90,7 @@ def PlatosVista(request):
     return render (request, 'menuplatos.html', data)
 
 
- #ahora para Empleados   
+#VISTA EMPLEADOS 
 
 def EmpleadosVista(request):
 
@@ -82,13 +102,13 @@ def EmpleadosVista(request):
     #esta vista va a utilizar un formulario de django, se cres un objeto de clase FormularioPlatos()
     formulario = FormularioEmpleados()
 
-#cramos un diccionario para enviar el formulario al html
+    #creamos un diccionario para enviar el formulario al html
 
     data = {
     'formulario': formulario,
     'bandera': False,
     'empleados':EmpleadosConsultar
-}
+    }
     #vista es el controlador, por aca RECIBIMOS LOS DATOS DEL FORMULARIO
     if request.method == 'POST':
         datosFormulario = FormularioEmpleados(request.POST)

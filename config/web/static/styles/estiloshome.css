@@ -53,3 +53,28 @@
 .formulario2{
     height: 450px;
 }
+
+.noticias {
+    /* border-radius: 30px;
+    max-width: 100%;
+    box-shadow: 5px 5px 5px 5px #45bbbb;*/
+    transition: transform 2s;
+    
+  }
+  .noticias:hover{
+    transform: rotate(20deg);
+  }
+
+  .nuestromenu{
+    background-image: url('../img/fondomenu.jpg');
+
+  }
+  .titulosmenu{
+    color: white;
+    background-color: green;
+    margin-top: 15px;
+  }
+  
+
+  
+

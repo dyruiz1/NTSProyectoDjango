@@ -20,17 +20,17 @@
         <div class="container nuestromenu">
 
             <div class="row mb-10">
-                    <h1 class="titulosmenu">Entradas</h1>
+                    <h1 class="titulosmenu">Cheff</h1>
                       <div class="row">
           </div>
                 <div class="row row-cols-1 row-cols-md-5 g-3">
-                    {% for entrada in entradas %}
+                    {% for cheff in cheffs %}
                         <div class="col">
                             <div class="card p-3">
-                                <img src="{{entrada.fotografia}}" alt="foto" class="card-img-top noticias" >
+                                <img src="{{cheff.foto}}" alt="foto" class="card-img-top noticias" >
                                 <div class="card-body">
-                                    <h5>{{entrada.nombre}}</h5>
-                                    <p>${{entrada.precio}}</p>
+                                    <h5>{{cheff.nombre}}</h5>
+                                    <p>{{cheff.apellidos}}</p>                                   
                                 </div>
                             </div>
                         </div>
@@ -40,16 +40,16 @@
 
             <div class="row mb-10">
                 <div class="row">
-                    <h1 class="titulosmenu" >Platos</h1>
+                    <h1 class="titulosmenu" >Administradores</h1>
                 </div>
                 <div class="row row-cols-1 row-cols-md-5 g-3">
-                    {% for plato in platos %}
+                    {% for administrador in administradores %}
                         <div class="col">
                             <div class="card p-3">
-                                <img src="{{plato.fotografia}}" alt="foto" class="card-img-top noticias">
+                                <img src="{{administrador.foto}}" alt="foto" class="card-img-top noticias">
                                 <div class="card-body">
-                                    <h5>{{plato.nombre}}</h5>
-                                    <p>${{plato.precio}}</p>
+                                    <h5>{{administrador.nombre}}</h5>
+                                    <p>{{administrador.apellidos}}</p>
                                 </div>
                             </div>
                         </div>
@@ -59,16 +59,16 @@
 
             <div class="row">
                 <div class="row">
-                    <h1 class="titulosmenu">Bebidas</h1>
+                    <h1 class="titulosmenu">Meseros</h1>
                 </div>
                 <div class="row row-cols-1 row-cols-md-5 g-3">
-                    {% for bebida in bebidas %}
+                    {% for mesero in meseros %}
                         <div class="col">
                             <div class="card p-3">
-                                <img src="{{bebida.fotografia}}" alt="foto" class="card-img-top noticias">
+                                <img src="{{mesero.foto}}" alt="foto" class="card-img-top noticias">
                                 <div class="card-body">
-                                    <h5>{{bebida.nombre}}</h5>
-                                    <p>${{bebida.precio}}</p>
+                                    <h5>{{mesero.nombre}}</h5>
+                                    <p>{{mesero.apellidos}}</p>
                                 </div>
                             </div>
                         </div>
@@ -78,16 +78,16 @@
 
             <div class="row mb-10">
                 <div class="row">
-                    <h1 class="titulosmenu">Postres</h1>
+                    <h1 class="titulosmenu">Ayudantes</h1>
                 </div>
                 <div class="row row-cols-1 row-cols-md-5 g-3">
-                    {% for postre in postres %}
+                    {% for ayudante in ayudantes %}
                         <div class="col">
                             <div class="card p-3">
-                                <img src="{{postre.fotografia}}" alt="foto" class="card-img-top noticias">
+                                <img src="{{ayudante.foto}}" alt="foto" class="card-img-top noticias">
                                 <div class="card-body">
-                                    <h5>{{postre.nombre}}</h5>
-                                    <p>${{postre.precio}}</p>
+                                    <h5>{{ayudante.nombre}}</h5>
+                                    <p>{{ayudante.apellidos}}</p>
                                 </div>
                             </div>
                         </div>

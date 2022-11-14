@@ -18,8 +18,8 @@ class FormularioEmpleados(forms.Form):
 
     apellidos = forms.CharField(
             required=True,
-            max_length=20,
-            widget=forms.Textarea(attrs={'class': 'form-control mb-3'})
+            max_length=15,
+            widget=forms.TextInput(attrs={'class': 'form-control mb-3'})
     )
 
     foto = forms.CharField(
